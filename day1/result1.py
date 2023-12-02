@@ -1,4 +1,5 @@
 # AOC Day-1 Trebuchet!?
+# Solution-1
 
 def strip_chars(input_file, output_file): # strips all chars except integers
     with open(input_file, 'r') as infile, open(output_file, 'w') as outfile:
@@ -11,8 +12,10 @@ def strip_chars(input_file, output_file): # strips all chars except integers
 
 input_file_path = 'input.txt'
 total_sum = 0
-
 refined_file_path = "refined_input.txt"
+
+strip_chars(input_file_path, refined_file_path)
+
 with open(refined_file_path, 'r') as file:
     for line_number, line in enumerate(file, start=1):
         stripped_line = line.strip()
