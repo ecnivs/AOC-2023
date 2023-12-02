@@ -18,9 +18,9 @@ with open(refined_file_path, 'r') as file:
         stripped_line = line.strip()
 
         if stripped_line:
-            first_digit = int(stripped_line[0])
-            last_digit = int(stripped_line[-1])
+            first_digit = str(stripped_line[0])
+            last_digit = str(stripped_line[-1])
             digit_sum = first_digit + last_digit
 
-            total_sum = total_sum + digit_sum
+            total_sum = total_sum + int(digit_sum)
 print(total_sum)
