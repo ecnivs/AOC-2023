@@ -1,5 +1,5 @@
 # Aoc Day-2 Cube Conundrum
-# Solution-1
+# result-1
 
 with open("input.txt") as fin:
     data = fin.read().strip().split("\n")

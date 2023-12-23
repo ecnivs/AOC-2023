@@ -4,7 +4,7 @@ with open("input.txt") as file:
 
 n = len(lines)
 m = len(lines[0])
-solution = 0
+result = 0
 
 num2 = [[[] for _ in range(m)] for _ in range(n)]
 
@@ -43,6 +43,6 @@ for i in range(n):
     for j in range(m):
         nums = num2[i][j]
         if lines[i][j] == "*" and len(nums) == 2:
-            solution += nums[0] * nums[1]
+            result += nums[0] * nums[1]
 
-print(solution)
+print(result)

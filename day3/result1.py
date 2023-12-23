@@ -1,5 +1,5 @@
 # Aoc Day-3 Gear Ratios
-# Solution-1
+# result-1
 
 with open("input.txt") as file:
     data = file.read()
@@ -7,7 +7,7 @@ with open("input.txt") as file:
 
 n = len(lines)
 m = len(lines[0])
-solution = 0
+result = 0
 
 def is_symbol(i, j):
     if not (0 <= i < n and 0 <= j < m):
@@ -34,12 +34,12 @@ for i, line in enumerate(lines):
         num = int(num)
 
         if is_symbol(i, _var-1) or is_symbol(i, j):
-            solution += num
+            result += num
             continue
 
         for k in range(_var-1, j+1):
             if is_symbol(i-1, k) or is_symbol(i+1, k):
-                solution += num
+                result += num
                 break
 
-print(solution)
+print(result)

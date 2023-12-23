@@ -1,5 +1,5 @@
 # AOC Day-1 Trebuchet!?
-# Solution-2
+# result-2
 
 replacements = {
      "one" : "o1e",
@@ -21,12 +21,12 @@ refined_file_path = "refined_input.txt"
 
 def strip_chars(input_file, output_file): # strips all chars except integers
     with open(input_file, 'r') as infile, open(output_file, 'w') as outfile:
-        for line_number, line in enumerate(infile, start=1):
+        for line_num, line in enumerate(infile, start=1):
             stripped_line = ''.join(char for char in line if char.isdigit())
             if stripped_line:
                 outfile.write(stripped_line + '\n')
             else:
-                print(f"Warning: Line {line_number} in {input_file} contains no integers.")
+                print(f"Warning: Line {line_num} in {input_file} contains no integers.")
 
 def process(input_file, output_file, replacements):
     try:
@@ -48,7 +48,7 @@ process(input_file_path, processed_file_path, replacements)
 strip_chars(processed_file_path, refined_file_path)
 
 with open(refined_file_path, 'r') as file:
-    for line_number, line in enumerate(file, start=1):
+    for line_num, line in enumerate(file, start=1):
         stripped_line = line.strip()
 
         if stripped_line:
