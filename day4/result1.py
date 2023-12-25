@@ -1,3 +1,6 @@
+# AOC Day-4 Scratchcards
+# result-1
+
 def read_input() -> list[str]:
     with open("input.txt") as f:
         lines = f.read().splitlines()
